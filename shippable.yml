@@ -11,7 +11,7 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
-    - ./configure && make & make install
+    - ./configure && make && make install
     - ./hello
 
   post_ci:
