@@ -2,9 +2,7 @@ language: none
 
 build:
   pre_ci:
-    - aclocal
-    - autoconf
-    - automake --add-missing
+    - echo 'true'
 
   pre_ci_boot:
     image_name: drydock/u14cpp
@@ -13,9 +11,11 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
+    - aclocal
+    - autoconf
+    - automake --add-missing
     - ./configure && make & make install
     - ./hello
-
 
   post_ci:
     - echo "true"
