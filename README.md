@@ -1,4 +1,4 @@
-sample C project
+#### sample C project
 
 On the maintainer’s system:
 
