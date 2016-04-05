@@ -11,9 +11,6 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
-    - aclocal
-    - autoconf
-    - automake --add-missing
     - ./configure && make & make install
     - ./hello
 
