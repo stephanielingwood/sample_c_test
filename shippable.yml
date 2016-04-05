@@ -5,7 +5,7 @@ build:
     - echo 'true'
 
   pre_ci_boot:
-    image_name: drydock/u14cpp
+    image_name: drydock/u12cpp
     image_tag: prod
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
