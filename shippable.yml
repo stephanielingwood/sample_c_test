@@ -1,12 +1,8 @@
 language: c
 
-compiler: gcc
-
 matrix:
   include:
     - compiler: clang
-  exclude:
-    - compiler: gcc
 
 build:
   pre_ci:
