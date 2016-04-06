@@ -1,23 +1,27 @@
 language: c
 compiler:
   - gcc
-  - clang
 env:
   - m1=one
   - m2=two
-  
 matrix:
   include:
     - compiler: gcc
       env:
         - m3=three
-
+    - compiler: clang
+      env:
+        - m1=one
+  exclude:
+    - compiler: gcc
+      env:
+        - m1=one
 build:
   pre_ci:
     - echo 'true'
 
   pre_ci_boot:
-    image_name: drydock/u12cpp
+    image_name: drydock/u14cpp
     image_tag: prod
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
