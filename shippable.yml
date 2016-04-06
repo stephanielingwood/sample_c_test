@@ -9,15 +9,8 @@ env:
 matrix:
   include:
     - compiler: gcc
-    - env:
+      env:
         - m3=three
-    - compiler: clang
-    - env:
-        - m1=one
-  exclude:
-    - compiler: gcc
-    - env:
-        - m1=one
 
 build:
   pre_ci:
