@@ -5,8 +5,8 @@ compiler: gcc
 matrix:
   include:
     - compiler: clang
- # exclude:
-  #  - compiler: "gcc"
+  exclude:
+    - compiler: gcc
 
 build:
   pre_ci:
