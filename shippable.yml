@@ -1,6 +1,7 @@
 language: c
 compiler:
   - gcc
+  - clang
 env:
   - m1=one
   - m2=two
