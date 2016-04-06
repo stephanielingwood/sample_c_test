@@ -4,6 +4,12 @@ compiler:
   - gcc
   - clang
 
+jdk:
+   - openjdk6
+   - openjdk7
+   - oraclejdk7
+   - oraclejdk8
+
 build:
   pre_ci:
     - echo 'true'
