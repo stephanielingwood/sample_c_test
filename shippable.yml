@@ -1,5 +1,7 @@
 language: c
 
+compiler: clang
+
 build:
   pre_ci:
     - echo 'true'
