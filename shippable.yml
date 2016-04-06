@@ -1,13 +1,21 @@
 language: c
-
 compiler:
   - gcc
-  - clang
-
+env:
+  - m1=one
+  - m2=two
 matrix:
+  include:
+    - compiler: gcc
+      env:
+        - m3=three
+    - compiler: clang
+      env:
+        - m1=one
   exclude:
     - compiler: gcc
-
+      env:
+        - m1=one
 build:
   pre_ci:
     - echo 'true'
@@ -15,14 +23,17 @@ build:
   pre_ci_boot:
     image_name: drydock/u12cpp
     image_tag: prod
-    pull: true
+    pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ./configure && make && make install
     - ./hello
+    - gcc --version
+    - clang --version
+    - echo $m1
+    - echo $m2
+    - echo $m3
 
   post_ci:
     - echo "true"
-
-
