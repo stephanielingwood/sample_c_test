@@ -9,14 +9,14 @@ env:
 matrix:
   include:
     - compiler: gcc
-      env:
+    - env:
         - m3=three
     - compiler: clang
-      env:
+    - env:
         - m1=one
   exclude:
     - compiler: gcc
-      env:
+    - env:
         - m1=one
 
 build:
