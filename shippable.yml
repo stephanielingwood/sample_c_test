@@ -1,9 +1,5 @@
 language: c
 
-compiler: 
-  - gcc
-  - clang
-
 jdk:
    - openjdk6
    - openjdk7
