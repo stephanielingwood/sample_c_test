@@ -15,4 +15,4 @@ build:
     - ./hello
 
   post_ci:
-    - echo "true_5"
+    - echo "true_6"
