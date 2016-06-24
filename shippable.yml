@@ -16,3 +16,14 @@ build:
 
   post_ci:
     - echo "true_8"
+    
+integrations:
+  notifications:
+    - integrationName: slack
+      type: slack
+      recipients:
+      - "@test-5148"
+      on_success: change
+      on_failure: always
+      on_start: always
+      on_pull_request: never
