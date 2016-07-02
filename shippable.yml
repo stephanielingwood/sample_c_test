@@ -20,7 +20,7 @@ build:
 integrations:
   notifications:
     - integrationName: slack-5148
-      type: slack
+      type: slackY
       recipients:
       - "#test-5148"
       on_success: change
