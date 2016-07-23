@@ -15,4 +15,5 @@ build:
     - ./hello
 
   post_ci:
+    - slepp 600
     - echo "true_8"
